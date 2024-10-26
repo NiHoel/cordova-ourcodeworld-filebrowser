@@ -3,6 +3,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nononsenseapps:filepicker:4.1.0'
+    implementation 'com.nononsenseapps:filepicker:4.2.1'
     implementation 'androidx.core:core:1.0.0'
 }
