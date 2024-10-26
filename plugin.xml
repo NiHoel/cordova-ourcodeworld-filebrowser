@@ -16,6 +16,16 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            </provider>
+                <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+                <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/mnk_file_path" />
+            </provider>
             <activity android:name="com.ourcodeworld.plugins.filebrowser.DialogShowPicker"
                 android:label="Our Code World filepicker" android:exported="true">
                 <intent-filter>
