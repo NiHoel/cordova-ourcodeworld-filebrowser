@@ -16,8 +16,7 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            </provider>
-                <provider
+            <provider
                 android:name="androidx.core.content.FileProvider"
                 android:authorities="${applicationId}.provider"
                 android:exported="false"
@@ -56,5 +55,6 @@
         <source-file src="src/android/DialogShowPicker.java" target-dir="src/com/ourcodeworld/plugin/"/>
         <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
         <resource-file src="src/android/styles.xml" target="res/values/styles.xml" />
+        <resource-file src="src/android/mnk_file_path.xml" target="res/xml/mnk_file_path.xml" />
     </platform>
 </plugin>

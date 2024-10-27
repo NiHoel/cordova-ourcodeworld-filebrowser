@@ -92,33 +92,6 @@ Before install this plugin
     cordova plugin add cordova-plugin-androidx-adapter
 ```
 
-After install this plugin
-
-Include a provider element inside android platform AndroidManifest.xml
-
-```xml
-    <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="${applicationId}.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/mnk_file_path" />
-    </provider>
-```
-
-Create mnk_file_path named xml file under style folder inside android platform. and add following xml snippet.
-
-```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <paths xmlns:android="http://schemas.android.com/apk/res/android">
-        <root-path
-            name="root"
-            path="." />
-    </paths>
-```
-
 -To fix issue as window.resolveLocalFileSystemURI is not a function. add cordova-plugin-file plugin
 
 ```batch
